@@ -9,7 +9,7 @@ use Socket::Class;
 our( $VERSION, @ISA );
 
 BEGIN {
-	$VERSION = '0.99_01';
+	$VERSION = '1.0';
 	@ISA = qw(Socket::Class);
 	require XSLoader;
 	XSLoader::load( __PACKAGE__, $VERSION );
@@ -33,7 +33,7 @@ Socket::Class::SSL - SSL support for Socket::Class
 
 =head1 DESCRIPTION
 
-This module inherits L<Socket::Class> and adds SSL support implemented
+The module inherits L<Socket::Class> and adds SSL support implemented
 by the OpenSSL Toolkit.
 Only the differences to Socket::Class are documented here.
 

@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Socket-Class-SSL
-version:             0.99_01
+version:             1.0
 abstract:            SSL support for Socket::Class
 license:             ~
 author:              ~

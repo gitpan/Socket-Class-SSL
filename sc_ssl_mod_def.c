@@ -854,6 +854,8 @@ void free_userdata( void *p ) {
 	Safefree( ud->private_key );
 	Safefree( ud->certificate );
 	Safefree( ud->client_ca );
+	Safefree( ud->ca_file );
+	Safefree( ud->ca_path );
 	Safefree( ud );
 }
 

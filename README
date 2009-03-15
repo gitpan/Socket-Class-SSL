@@ -1,11 +1,11 @@
 Socket::Class::SSL
 ==================
 
-This module inherits Socket::Class and adds SSL support implemented
-by the OpenSSL Toolkit.
+The module inherits Socket::Class and adds SSL support implemented by
+the OpenSSL Toolkit.
 
-It has been tested on unix, darwin, MSWin(32,x64), cygwin and solaris
-platforms.
+It has been tested on unix, darwin, MSWin(32,x64), cygwin, solaris and
+freebsd platforms.
 
 INSTALLATION
 

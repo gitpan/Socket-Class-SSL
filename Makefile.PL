@@ -60,6 +60,12 @@ if( $openssldir ) {
 	$makeopts{'INC'} .= " -I${openssldir}/include";
 	$makeopts{'LIBS'}[0] = "-L${openssldir}/lib";
 }
+elsif( $^O eq 'solaris' ) {
+	if( -d '/opt/csw/include/openssl' ) {
+		$makeopts{'INC'} .= " -I/opt/csw/include";
+		$makeopts{'LIBS'}[0] = "-L/opt/csw/lib";
+	}
+}
 
 if( $^O eq 'MSWin32' ) {
 	$makeopts{'DEFINE'} .= ' -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS';
@@ -73,6 +79,8 @@ if( $^O eq 'MSWin32' ) {
 		}
 	}
 	$makeopts{'LIBS'}[0] .= ' -llibeay32 -lssleay32';
+	# cpan bug #37639
+	$ExtUtils::MM_Win32::Config{'ccversion'} = 13;
 }
 elsif( $^O eq 'cygwin' ) {
 	$makeopts{'LIBS'}[0] .= ' -L/lib/w32api -lole32 -lversion -lws2_32 -lssl -lcrypto';

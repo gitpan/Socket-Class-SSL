@@ -1,4 +1,7 @@
 Revision history for Perl extension Socket::Class::SSL
 
+version 1.0
+    - fixed memory hole in cleanup
+
 version 0.99_01 (toward 1.0)
     - initial version
